@@ -17,7 +17,7 @@ fi
 BASENAME=$(basename "$FILENAME" .cpp)
 
 # Define compile arguments (customize as needed)
-COMPILE_ARGS="-Wshadow -Wall -O2 -Wno-unused-result"
+COMPILE_ARGS="-Wshadow -Wall -O2 -Wno-unused-result -Wl,-stack_size,20000000 -std=c++20"
 
 # Compile the C++ file
 g++-14 $COMPILE_ARGS "$FILENAME" -o "$BASENAME"

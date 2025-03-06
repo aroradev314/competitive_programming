@@ -30,8 +30,6 @@ int main() {
 	for (int query = 0; query < q; query++) {
 		cin >> a >> b;
 		int l = x[0], r = x[n - 1];
-		// for (int i = 0; i <= x[n - 1]; i++) cout << a * left_dist[i] + b * right_dist[i] << " ";
-		// cout << endl;
 
 		while (r - l > 2) {
 			int first = l + (r - l) / 3;
