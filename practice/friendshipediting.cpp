@@ -19,10 +19,6 @@ void solve() {
 		adj[b][a] = true;
 	}
 
-	// for (int i = 0; i < n; i++)
-	// 	for (int j = 0; j < n; j++) 
-	// 		adj[i][j] = !adj[i][j];
-
 	// for each subset, count ops to remove every edge inside it
 	for (int i = 1; i < (1 << n); i++) {
 		for (int j = 0; j < n; j++) {
@@ -41,8 +37,6 @@ void solve() {
 		}
 	}
 
-	// what should dp[i] store
-	// 
 	for (int i = 1; i < (1 << n); i++) {
 		dp[i] = cost[i];
 		for (int mask = i; mask != 0; mask = (mask - 1) & i) {
