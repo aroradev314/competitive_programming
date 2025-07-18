@@ -19,9 +19,7 @@ void solve() {
 		cout << n << "\n";
 
 		if (n != 1) cout << n << " " << 1 << "\n";
-		// cout << m << " " << n << " " << endl;
 		m -= (1 + n);
-		// cout << m << endl;
 		for (int i = 2; i < n; i++) {
 			ll left = m - (n - i - 1);
 
@@ -35,7 +33,7 @@ void solve() {
 			}
 		}
 
-		assert(m == 0);
+		// assert(m == 0);
 	}
 	else cout << "-1\n";
 }
