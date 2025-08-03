@@ -20,7 +20,7 @@ BASENAME=$(basename "$FILENAME" .cpp)
 COMPILE_ARGS="-Wshadow -Wall -O2 -Wno-unused-result -Wl,-stack_size,20000000 -std=c++20"
 
 # Compile the C++ file
-g++-14 $COMPILE_ARGS "$FILENAME" -o "$BASENAME"
+g++-15 $COMPILE_ARGS "$FILENAME" -o "$BASENAME"
 
 # Check if the compilation was successful
 if [ $? -ne 0 ]; then
